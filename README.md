@@ -6,7 +6,7 @@
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/julian-rinc%C3%B3n-1a05501b7/)
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:julianer2002@gmail.com)
-![Location](https://img.shields.io/badge/Colombia-🇨🇴-FFCD00?style=for-the-badge)
+![Location](https://img.shields.io/badge/Colombia-%F0%9F%87%A8%F0%9F%87%B4-FFCD00?style=for-the-badge&logoColor=white)
 
 </div>
 
@@ -64,8 +64,8 @@ julian = {
 
 | Project | Description | Stack | Status |
 |---------|-------------|-------|--------|
-| 🤖 [Jarvis IronMan](https://github.com/Julian-Rincon/jarvis-ironman) | Fully local voice assistant: Mic → STT → LLM → Actions → TTS | Python · Whisper · Ollama · Playwright | 🔨 Active |
-| 🏠 [Ames Housing ML](https://github.com/Julian-Rincon/Big-Data) | Real estate price prediction · R²=0.75 · MAE≈$23K · 6 algorithms | LightGBM · XGBoost · Scikit-learn | ✅ Done |
+| 🤖 [Jarvis IronMan](https://github.com/Julian-Rincon/jarvis-ironman) | Fully local voice assistant: Mic to STT to LLM to Actions to TTS | Python · Whisper · Ollama · Playwright | 🔨 Active |
+| 🏠 [Ames Housing ML](https://github.com/Julian-Rincon/Big-Data) | Real estate price prediction · R2=0.75 · MAE approx $23K · 6 algorithms | LightGBM · XGBoost · Scikit-learn | ✅ Done |
 | ☁️ Big Data on AWS | Full-stack Chinook DB: React + FastAPI + RDS + EC2 | AWS · FastAPI · PostgreSQL | ✅ Done |
 | 🔥 Complex System Simulators | Forest fire FSM agents + SEIR+H epidemic model with RK4 | Python · Matplotlib | ✅ Done |
 | 📊 [Firma360](https://github.com/Julian-Rincon/firma360) | ETL pipeline + Power BI dashboards for Colombian firms | Python · openpyxl · Power BI | 🔨 Active |
@@ -76,8 +76,9 @@ julian = {
 
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Julian-Rincon&show_icons=true&theme=tokyonight&hide_border=true&count_private=true"/>
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Julian-Rincon&layout=compact&theme=tokyonight&hide_border=true"/>
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Julian-Rincon&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&cache_seconds=86400&v=1"/>
+&nbsp;&nbsp;
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Julian-Rincon&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=86400&v=1"/>
 
 </div>
 
@@ -86,7 +87,9 @@ julian = {
 ## 🎓 Education
 
 **Universidad Sergio Arboleda** · Bogotá, Colombia
+
 *B.Sc. Computer Science & Artificial Intelligence* · 8th semester · 2021–present
+
 Current courses: Big Data & Data Engineering · Machine Learning · Simulation & Modeling · Neural Networks
 
 ---
