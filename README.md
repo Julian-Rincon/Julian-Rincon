@@ -1,3 +1,31 @@
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=1B4F8A&height=200&section=header&text=Julian%20Rinc%C3%B3n&fontSize=60&fontColor=ffffff&fontAlignY=38&desc=CS%20%26%20AI%20Student%20%C2%B7%20Data%20Science%20%C2%B7%20Machine%20Learning&descAlignY=58&descSize=18" width="100%"/>
+</div>
+
+<div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/julian-rinc%C3%B3n-1a05501b7/)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:julianer2002@gmail.com)
+![Location](https://img.shields.io/badge/Colombia-🇨🇴-FFCD00?style=for-the-badge)
+
+</div>
+
+---
+
+## 👨‍💻 About me
+
+I'm an **8th-semester Computer Science & AI student** at Universidad Sergio Arboleda (Bogotá), focused on building real-world AI and data science systems — not just academic exercises.
+
+```python
+julian = {
+    "focus":    ["Data Science", "Machine Learning", "Local AI Systems"],
+    "building": "Jarvis IronMan — fully local voice assistant with LLMs",
+    "stack":    ["Python", "AWS", "PyTorch", "XGBoost", "Ollama"],
+    "goal":     "Found a data science company with proprietary AI",
+    "open_to":  ["internships", "freelance", "collaborations"]
+}
+```
+
 ---
 
 ## 🛠️ Tech Stack
@@ -37,10 +65,10 @@
 | Project | Description | Stack | Status |
 |---------|-------------|-------|--------|
 | 🤖 [Jarvis IronMan](https://github.com/Julian-Rincon/jarvis-ironman) | Fully local voice assistant: Mic → STT → LLM → Actions → TTS | Python · Whisper · Ollama · Playwright | 🔨 Active |
-| 🏠 [Ames Housing ML](https://github.com/Julian-Rincon/Big-Data) | Real estate price prediction · **R²=0.75, MAE≈$23K** · 6 algorithms compared | LightGBM · XGBoost · Scikit-learn | ✅ Done |
-| ☁️ Big Data on AWS | Full-stack app on Chinook DB · React + FastAPI + RDS + EC2 | AWS · FastAPI · PostgreSQL | ✅ Done |
+| 🏠 [Ames Housing ML](https://github.com/Julian-Rincon/Big-Data) | Real estate price prediction · R²=0.75 · MAE≈$23K · 6 algorithms | LightGBM · XGBoost · Scikit-learn | ✅ Done |
+| ☁️ Big Data on AWS | Full-stack Chinook DB: React + FastAPI + RDS + EC2 | AWS · FastAPI · PostgreSQL | ✅ Done |
 | 🔥 Complex System Simulators | Forest fire FSM agents + SEIR+H epidemic model with RK4 | Python · Matplotlib | ✅ Done |
-| 📊 [Firma360](https://github.com/Julian-Rincon/firma360) | Data science portfolio: ETL pipeline + Power BI dashboards for Colombian firms | Python · openpyxl · Power BI | 🔨 Active |
+| 📊 [Firma360](https://github.com/Julian-Rincon/firma360) | ETL pipeline + Power BI dashboards for Colombian firms | Python · openpyxl · Power BI | 🔨 Active |
 
 ---
 
@@ -57,8 +85,8 @@
 
 ## 🎓 Education
 
-**Universidad Sergio Arboleda** · Bogotá, Colombia  
-*B.Sc. Computer Science & Artificial Intelligence* · 8th semester · 2021–present  
+**Universidad Sergio Arboleda** · Bogotá, Colombia
+*B.Sc. Computer Science & Artificial Intelligence* · 8th semester · 2021–present
 Current courses: Big Data & Data Engineering · Machine Learning · Simulation & Modeling · Neural Networks
 
 ---
