@@ -1,7 +1,7 @@
 <div align="center">
 
 <h1>Julian Rincón</h1>
-<h3>CS & AI Student · Data Science · Machine Learning</h3>
+<h3>CS & AI Student &nbsp;·&nbsp; Data Science &nbsp;·&nbsp; Machine Learning</h3>
 
 <br/>
 
@@ -15,7 +15,7 @@
 
 ## About me
 
-I'm an **8th-semester Computer Science & AI student** at Universidad Sergio Arboleda (Bogotá), focused on building real-world AI and data science systems — not just academic exercises.
+I'm an **8th-semester Computer Science & AI student** at Universidad Sergio Arboleda (Bogota), focused on building real-world AI and data science systems — not just academic exercises.
 
 ```python
 julian = {
@@ -73,22 +73,16 @@ julian = {
 
 ---
 
-## GitHub Stats
+## Education
 
-<div align="center">
+**Universidad Sergio Arboleda** - Bogota, Colombia
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Julian-Rincon&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&cache_seconds=86400"/>
-&nbsp;&nbsp;
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Julian-Rincon&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=86400"/>
+*B.Sc. Computer Science & Artificial Intelligence* - 8th semester - 2021 to present
 
-</div>
+Current courses: Big Data and Data Engineering - Machine Learning - Simulation and Modeling - Neural Networks
 
 ---
 
-## Education
-
-**Universidad Sergio Arboleda** · Bogotá, Colombia
-
-*B.Sc. Computer Science & Artificial Intelligence* · 8th semester · 2021 to present
-
-Current courses: Big Data and Data Engineering · Machine Learning · Simulation and Modeling · Neural Networks
+<div align="center">
+<sub>Open to internships, freelance projects and collaborations in AI and Data Science</sub>
+</div>
