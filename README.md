@@ -65,7 +65,7 @@ julian = {
 
 | Project | Description | Stack | Status |
 |---------|-------------|-------|--------|
-| [Jarvis IronMan](https://github.com/Julian-Rincon/jarvis-ironman) | Fully local voice assistant: Mic to STT to LLM to Actions to TTS | Python, Whisper, Ollama, Playwright | Active |
+| [Jarvis IronMan](https://github.com/Julian-Rincon/Jarvis-Public) | Fully local voice assistant: Mic to STT to LLM to Actions to TTS | Python, Whisper, Ollama, Playwright | Active |
 | [Ames Housing ML](https://github.com/Julian-Rincon/Big-Data) | Real estate price prediction. R2=0.75, MAE approx $23K, 6 algorithms compared | LightGBM, XGBoost, Scikit-learn | Done |
 | Big Data on AWS | Full-stack Chinook DB: React + FastAPI + RDS + EC2 | AWS, FastAPI, PostgreSQL | Done |
 | Complex System Simulators | Forest fire FSM agents + SEIR+H epidemic model with RK4 | Python, Matplotlib | Done |
