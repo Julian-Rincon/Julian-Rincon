@@ -6,6 +6,7 @@
 <br/>
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/julian-rinc%C3%B3n-1a05501b7/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-1B4F8A?style=for-the-badge&logo=githubpages&logoColor=white)](https://julian-rincon.github.io)
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:julianer2002@gmail.com)
 ![Location](https://img.shields.io/badge/Colombia-FFCD00?style=for-the-badge&logo=googlemaps&logoColor=white)
 
@@ -23,7 +24,8 @@ julian = {
     "building": "Jarvis IronMan — fully local voice assistant with LLMs",
     "stack":    ["Python", "AWS", "PyTorch", "XGBoost", "Ollama"],
     "goal":     "Found a data science company with proprietary AI",
-    "open_to":  ["internships", "freelance", "collaborations"]
+    "open_to":  ["internships", "freelance", "collaborations"],
+    "portfolio": "https://julian-rincon.github.io"
 }
 ```
 
@@ -66,10 +68,11 @@ julian = {
 | Project | Description | Stack | Status |
 |---------|-------------|-------|--------|
 | [Jarvis IronMan](https://github.com/Julian-Rincon/Jarvis-Public) | Fully local voice assistant: Mic to STT to LLM to Actions to TTS | Python, Whisper, Ollama, Playwright | Active |
-| [Ames Housing ML](https://github.com/Julian-Rincon/Big-Data) | Real estate price prediction. R2=0.75, MAE approx $23K, 6 algorithms compared | LightGBM, XGBoost, Scikit-learn | Done |
-| Big Data on AWS | Full-stack Chinook DB: React + FastAPI + RDS + EC2 | AWS, FastAPI, PostgreSQL | Done |
-| Complex System Simulators | Forest fire FSM agents + SEIR+H epidemic model with RK4 | Python, Matplotlib | Done |
-| [Firma360](https://github.com/Julian-Rincon/firma360) | ETL pipeline + Power BI dashboards for Colombian firms | Python, openpyxl, Power BI | Active |
+| [Ames Housing ML](https://github.com/Julian-Rincon/ames-housing-ml) | Real estate ML on 20,203 records. R2=0.75, MAE approx $23K, 6 algorithms, K-Means, Hierarchical and DBSCAN | LightGBM, XGBoost, Scikit-learn | Done |
+| [ML DSL with ANTLR4](https://github.com/Julian-Rincon/Proyecto-Final-L) | Custom language for ML workflows: regression, MLP, clustering, plots | Python, ANTLR4, scikit-learn | Done |
+| [Chinook Fullstack on AWS](https://github.com/Julian-Rincon/chinook-fullstack) | Full-stack Chinook DB: React plus FastAPI plus RDS plus EC2 | AWS, FastAPI, PostgreSQL | Done |
+| [High Performance Computing](https://github.com/Julian-Rincon/HPC) | TSP, Sobel edge detection, video processing and distributed TSP with Docker Swarm | Python, Docker Swarm | Done |
+| [Network Traffic Analysis](https://github.com/Julian-Rincon/Analisis-de-Trafico-de-Red-con-PowerShell-y-Python) | 1.5h real traffic capture, packet distribution and heavy-tail analysis on 384K files | Python, PowerShell, Pandas | Done |
 
 ---
 
@@ -84,5 +87,9 @@ Current courses: Big Data and Data Engineering - Machine Learning - Simulation a
 ---
 
 <div align="center">
-<sub>Open to internships, freelance projects and collaborations in AI and Data Science</sub>
+
+**Open to internships, freelance projects and collaborations in AI and Data Science**
+
+[julian-rincon.github.io](https://julian-rincon.github.io)
+
 </div>
