@@ -70,7 +70,7 @@ julian = {
 | Project | Description | Stack | Status |
 |---------|-------------|-------|--------|
 | [Jarvis IronMan](https://github.com/Julian-Rincon/Jarvis-Public) | Fully local voice assistant: Mic → STT → LLM → Actions → TTS, offline | Python, Whisper, Ollama, Playwright | 🟢 Active |
-| [SAVI — Autonomous Real Estate Valuation](https://github.com/Julian-Rincon/ames-housing-ml) | MDP agent that APPROVE/REVIEW/REJECT valuations based on risk. XGBoost R²=0.9609, 93.1% auto-approved · [Live Demo](https://julian-rincon.github.io/ames-housing-ml/MDP_Ames_Presentacion.html) | XGBoost, MDP, Value Iteration, K-Means | 🟢 Active |
+| [SAVI v2 — Autonomous Real Estate Valuation](https://github.com/Julian-Rincon/ames-housing-ml) | Full RL pipeline: MDP Value Iteration → Q-Learning (8K eps) → DQN (PyTorch). Consensus policy APPROVE/REVIEW/REJECT. XGBoost R²=0.9609 · [Live Demo](https://julian-rincon.github.io/ames-housing-ml/SAVI_v2_ParcialFinal.html) | XGBoost, MDP, Q-Learning, DQN, PyTorch | 🟢 Active |
 | [ML DSL with ANTLR4](https://github.com/Julian-Rincon/Proyecto-Final-L) | Custom language for ML workflows: regression, MLP, clustering, plots | Python, ANTLR4, scikit-learn | ✅ Done |
 | [Chinook Cloud Data Platform](https://github.com/Julian-Rincon/chinook-fullstack) | React + FastAPI on EC2, private RDS, Terraform IaC, Glue ETL → S3 → Athena → Power BI star schema | AWS, Terraform, FastAPI, React, Glue | ✅ Done |
 | [High Performance Computing](https://github.com/Julian-Rincon/HPC) | TSP, Sobel edge detection, video processing and distributed TSP with Docker Swarm | Python, Docker Swarm | ✅ Done |
