@@ -73,6 +73,7 @@ julian = {
 | [SAVI v2 — Autonomous Real Estate Valuation](https://github.com/Julian-Rincon/ames-housing-ml) | Full RL pipeline: MDP Value Iteration → Q-Learning (8K eps) → DQN (PyTorch). Consensus policy APPROVE/REVIEW/REJECT. XGBoost R²=0.9609 · [Live Demo](https://julian-rincon.github.io/ames-housing-ml/SAVI_v2_ParcialFinal.html) | XGBoost, MDP, Q-Learning, DQN, PyTorch | 🟢 Active |
 | [ML DSL with ANTLR4](https://github.com/Julian-Rincon/Proyecto-Final-L) | Custom language for ML workflows: regression, MLP, clustering, plots | Python, ANTLR4, scikit-learn | ✅ Done |
 | [Chinook Cloud Data Platform](https://github.com/Julian-Rincon/chinook-fullstack) | React + FastAPI on EC2, private RDS, Terraform IaC, Glue ETL → S3 → Athena → Power BI star schema | AWS, Terraform, FastAPI, React, Glue | ✅ Done |
+| [ShopStream Big Data Pipeline](https://github.com/Julian-Rincon/shopstream-bigdata) | End-to-end AWS pipeline: 2.5M synthetic e-commerce events, S3+Lambda validation, EMR+PySpark analytics, Glue ETL → RDS, Flask API via Zappa, CI/CD | PySpark, Lambda, Glue, EMR, Flask, Zappa | ✅ Done |
 | [High Performance Computing](https://github.com/Julian-Rincon/HPC) | TSP, Sobel edge detection, video processing and distributed TSP with Docker Swarm | Python, Docker Swarm | ✅ Done |
 | [Network Traffic Analysis](https://github.com/Julian-Rincon/Analisis-de-Trafico-de-Red-con-PowerShell-y-Python) | 1.5h real traffic capture, packet distribution and heavy-tail analysis on 384K files | Python, PowerShell, Pandas | ✅ Done |
 
