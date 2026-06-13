@@ -31,6 +31,8 @@ julian = {
         "Dogma       — stochastic social propagation engine (Markov + HMM + Nash)",
     ],
     "stack":    ["Python", "PySpark", "PyTorch", "AWS", "Terraform", "FastAPI", "TypeScript"],
+    "won":      ["USABOT Robotics Challenge — 1st Place Overall (Nov 2025)",
+                 "Wisibilízalas, Univ. Pompeu Fabra — 1st Place (WarmiTics)"],
     "goal":     "ML/Data Engineering internship → MSc in Germany",
     "open_to":  ["internships", "research collaborations", "freelance"],
 }
@@ -141,6 +143,32 @@ julian = {
 | [ML DSL with ANTLR4](https://github.com/Julian-Rincon/Proyecto-Final-L) | Custom language for ML workflows: regression, MLP, clustering, plots | Python, ANTLR4, scikit-learn | ✅ Done |
 | [HPC Workshops](https://github.com/Julian-Rincon/HPC) | TSP brute force, Sobel edge detection, video processing, distributed TSP with Docker Swarm | Python, Docker Swarm | ✅ Done |
 | [Network Traffic Analysis](https://github.com/Julian-Rincon/Analisis-de-Trafico-de-Red-con-PowerShell-y-Python) | 1.5h real traffic capture, heavy-tail analysis on 384K files | Python, PowerShell, Pandas | ✅ Done |
+
+---
+
+## Hackathons & Leadership
+
+### 🤖 USABOT Robotics Challenge — 1st Place Overall `Nov 2025`
+
+> Led hardware design and commercial strategy for an intelligent automatic irrigation system, winning first place overall at the USABOT Robotics Challenge against competing university teams.
+
+**Technical contribution:** Designed the 3D hardware model for the physical prototype and integrated ultrasonic sensor architecture for real-time water level detection and automated valve control.
+
+**Business contribution:** Authored and delivered the go-to-market strategy and commercial pitch — demonstrating that engineering solutions need to be sold, not just built.
+
+`3D Modeling` `Sensor Integration` `Hardware Design` `Business Strategy` `Pitching`
+
+---
+
+### 🌐 [WarmiTics — Wisibilízalas, Universidad Pompeu Fabra](https://sites.google.com/view/warmitics) — 1st Place `2019`
+
+> Served as **Technical PM and Lead Frontend/UX** for WarmiTics, a web platform highlighting women leaders in STEM. Won 1st Place at Wisibilízalas (organized by Universidad Pompeu Fabra, Barcelona), competing against teams from Latin America and Europe.
+
+**Technical contribution:** Architected and developed the full web application; owned all frontend and UX decisions from information architecture to deployment.
+
+**Leadership contribution:** Managed cross-functional logistics and stakeholder coordination; conducted structured interviews with women leaders in technology and ICT to gather primary content.
+
+`Project Management` `Frontend/UX` `Stakeholder Management` `Social Impact`
 
 ---
 
