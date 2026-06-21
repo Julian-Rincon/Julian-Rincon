@@ -168,7 +168,7 @@ julian = {
 
 ## Currently Building
 
-- **Jarvis v2** — Migrating to Gemini (LLM + STT + Vision), adding meeting agent skill (autonomous interview representation), calendar integration from internship pipeline
+- **Jarvis** — In production daily (TieredBrain: Ollama/Groq/Gemini, 16 skills, meeting agent, desktop vision agent, ChromaDB episodic memory). Actively expanding: deeper calendar/email automation, enhanced gaming mode, improved episodic memory pipeline
 - **Internship Automation Pipeline** — LLM-scored job discovery across GetOnBoard + ATS sources, Telegram daily digest via n8n, Railway deploy
 - **Next target:** ML Engineering or Data Engineering internship · MSc application Germany
 
