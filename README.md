@@ -19,13 +19,13 @@
 
 I don't build demos. I build systems that run.
 
-8th-semester CS & AI student at Universidad Sergio Arboleda, working at the intersection of machine learning engineering, distributed data infrastructure, and autonomous AI systems. My stack runs on real AWS infrastructure and a Linux workstation — not just notebooks.
+9th-semester CS & AI student at Universidad Sergio Arboleda, working at the intersection of machine learning engineering, distributed data infrastructure, and autonomous AI systems. My stack runs on real AWS infrastructure and a Linux workstation — not just notebooks.
 
 ```python
 julian = {
     "focus":    ["ML Engineering", "Data Engineering", "Autonomous Agents", "Stochastic Systems"],
     "building": [
-        "Jarvis IronMan — dual-brain local AI (Ollama routing + Gemini reasoning)",
+        "Jarvis IronMan — production-grade daily AI assistant on Linux (TieredBrain: Ollama/Groq/Gemini, 16 skills, meeting agent, desktop vision, ChromaDB memory)",
         "SAVI v2     — autonomous valuation via RL pipeline (MDP → Q-Learning → DQN)",
         "ShopStream  — end-to-end AWS Big Data pipeline (Lambda → EMR → Glue → RDS)",
         "Dogma       — stochastic social propagation engine (Markov + HMM + Nash)",
@@ -75,19 +75,13 @@ julian = {
 
 ## Featured Projects
 
-### 🧠 [Jarvis IronMan](https://github.com/Julian-Rincon/Jarvis-Public) — Dual-Brain Local AI Assistant `🟢 Active`
+### 🧠 [Jarvis IronMan](https://github.com/Julian-Rincon/Jarvis-Public) — Production AI Assistant `🟢 Active`
 
-> Engineered a fully offline AI assistant on Linux (Fedora KDE) with a two-model inference architecture: **Ollama** handles sub-200ms local intent routing while **Gemini API** resolves complex multi-step reasoning — zero cloud dependency for the core pipeline.
+> Production-grade personal AI assistant running daily on Linux (Fedora KDE). Streaming voice conversation with sub-second response and barge-in interrupt.
 
-**Architecture:** `Mic → Whisper STT → Pre-LLM Router → Ollama/Gemini → Skill Engine → Piper TTS → HUD`
+**TieredBrain:** 3-level LLM routing (Ollama local → Groq → Gemini) with circuit breakers and shared context. 16 auto-discovered skills. Iron Man web HUD with live system metrics. Meeting agent that joins Meet/Zoom/Teams, transcribes live, and speaks through a virtual microphone. Autonomous desktop vision agent (up to 25 steps). Full Google Workspace integration (Calendar, Gmail, Drive). Vector + episodic memory (ChromaDB). Daily OS layer (morning briefing, day close, productivity metrics). Gaming mode with automatic GPU/thermal management. Telegram remote control, voice-first.
 
-**Technical highlights:**
-- ZeroMQ multiprocessing IPC separating STT, LLM, and TTS processes
-- 12 active skills including Gmail/Calendar OAuth2, Playwright browser automation, Telegram remote control
-- Wake-word detection via openwakeword with STT fallback
-- ChromaDB vector memory in development
-
-`Python 3.11` `Whisper` `Ollama` `Gemini API` `Playwright` `ZeroMQ` `tkinter` `ChromaDB`
+`Python` `TieredBrain (Ollama/Groq/Gemini)` `Whisper` `Piper TTS` `ChromaDB` `WebSocket HUD` `PipeWire` `OAuth2`
 
 ---
 
@@ -135,7 +129,7 @@ julian = {
 
 | Project | Description | Stack | Status |
 |---------|-------------|-------|--------|
-| [Jarvis IronMan](https://github.com/Julian-Rincon/Jarvis-Public) | Dual-brain local AI: Ollama routing + Gemini reasoning, Whisper STT, Piper TTS, full skill ecosystem | Python, Whisper, Ollama, Gemini, ZeroMQ | 🟢 Active |
+| [Jarvis IronMan](https://github.com/Julian-Rincon/Jarvis-Public) | Production-grade daily AI assistant: TieredBrain (Ollama/Groq/Gemini), 16 skills, meeting agent, desktop vision agent (25 steps), ChromaDB memory, Telegram remote control | Python, Whisper, TieredBrain, ChromaDB, PipeWire, OAuth2 | 🟢 Active |
 | [SAVI v2](https://github.com/Julian-Rincon/ames-housing-ml) | Full RL pipeline (MDP → Q-Learning → DQN) for autonomous real estate valuation. XGBoost R²=0.9609 · [Demo](https://julian-rincon.github.io/ames-housing-ml/SAVI_v2_ParcialFinal.html) | XGBoost, PyTorch, MDP, DQN | 🟢 Active |
 | [ShopStream](https://github.com/Julian-Rincon/shopstream-bigdata) | AWS Big Data pipeline: 2.5M events, Lambda, EMR/PySpark, Glue ETL, RDS, Flask/Zappa, CI/CD | PySpark, Lambda, Glue, EMR, Zappa | ✅ Done |
 | Project Dogma | Stochastic social simulation: Markov Chains + HMM + Nash Equilibrium + Monte Carlo | TypeScript, React, Game Theory | ✅ Done |
@@ -184,7 +178,7 @@ julian = {
 
 **Universidad Sergio Arboleda** — Bogotá, Colombia
 
-*B.Sc. Computer Science & Artificial Intelligence* · 8th semester · 2021 – present
+*B.Sc. Computer Science & Artificial Intelligence* · 9th semester of 9 · 2021 – present
 
 | Certification | Issuer | Date |
 |---|---|---|
