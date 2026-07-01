@@ -25,7 +25,7 @@ I don't build demos. I build systems that run.
 julian = {
     "focus":    ["ML Engineering", "Data Engineering", "Autonomous Agents", "Stochastic Systems"],
     "building": [
-        "Jarvis IronMan — production-grade daily AI assistant on Linux (TieredBrain: Ollama/Groq/Gemini, 16 skills, meeting agent, desktop vision, ChromaDB memory)",
+        "NEXUS — autonomous personal AI system (5-tier LLM routing, 36 skills, MCP server)",
         "SAVI v2     — autonomous valuation via RL pipeline (MDP → Q-Learning → DQN)",
         "ShopStream  — end-to-end AWS Big Data pipeline (Lambda → EMR → Glue → RDS)",
         "Dogma       — stochastic social propagation engine (Markov + HMM + Nash)",
@@ -75,13 +75,20 @@ julian = {
 
 ## Featured Projects
 
-### 🧠 [Jarvis IronMan](https://github.com/Julian-Rincon/Jarvis-Public) — Production AI Assistant `🟢 Active`
+### 🤖 [NEXUS](https://github.com/Julian-Rincon/NEXUS-Public) — Autonomous Personal AI System `🟢 Active`
 
-> Production-grade personal AI assistant running daily on Linux (Fedora KDE). Streaming voice conversation with sub-second response and barge-in interrupt.
+> Built a production-grade personal AI system on Linux that manages the machine, not just conversation. Evolved from a voice assistant into a 5-tier LLM routing system with 36 self-discovered skills, an MCP server exposing its own capabilities as tools for other AI agents, and safety-gated automation across home, finance, and dev workflows.
 
-**TieredBrain:** 3-level LLM routing (Ollama local → Groq → Gemini) with circuit breakers and shared context. 16 auto-discovered skills. Iron Man web HUD with live system metrics. Meeting agent that joins Meet/Zoom/Teams, transcribes live, and speaks through a virtual microphone. Autonomous desktop vision agent (up to 25 steps). Full Google Workspace integration (Calendar, Gmail, Drive). Vector + episodic memory (ChromaDB). Daily OS layer (morning briefing, day close, productivity metrics). Gaming mode with automatic GPU/thermal management. Telegram remote control, voice-first.
+**Architecture:** `5-tier LLM routing (local + cloud fast + large-context multimodal + fallback) → Skill Engine (36 auto-discovered) → MCP Server → Native Desktop HUD`
 
-`Python` `TieredBrain (Ollama/Groq/Gemini)` `Whisper` `Piper TTS` `ChromaDB` `WebSocket HUD` `PipeWire` `OAuth2`
+**Technical highlights:**
+- MCP server exposing NEXUS capabilities as tools for external AI agents
+- Home automation (IoT), personal finance parsing (bank email summaries), and passive security monitoring (process/port/USB/auth anomaly detection) — all active in daily use
+- Dev-workflow automation: test runner, log triage, build, natural-language code generation with validation
+- Safety-first design: confirmation-gated system power control, allowlisted automation, passive-only monitoring
+- Custom-trained wake word and cloned-voice TTS with local fallback
+
+`Python 3.11` `MCP` `Whisper` `ChromaDB` `OAuth2` `Native Desktop HUD`
 
 ---
 
@@ -129,7 +136,7 @@ julian = {
 
 | Project | Description | Stack | Status |
 |---------|-------------|-------|--------|
-| [Jarvis IronMan](https://github.com/Julian-Rincon/Jarvis-Public) | Production-grade daily AI assistant: TieredBrain (Ollama/Groq/Gemini), 16 skills, meeting agent, desktop vision agent (25 steps), ChromaDB memory, Telegram remote control | Python, Whisper, TieredBrain, ChromaDB, PipeWire, OAuth2 | 🟢 Active |
+| [NEXUS](https://github.com/Julian-Rincon/NEXUS-Public) | Autonomous personal AI system: 5-tier LLM routing, 36 skills, MCP server, home/finance/security automation | Python, MCP, Whisper, ChromaDB | 🟢 Active |
 | [SAVI v2](https://github.com/Julian-Rincon/ames-housing-ml) | Full RL pipeline (MDP → Q-Learning → DQN) for autonomous real estate valuation. XGBoost R²=0.9609 · [Demo](https://julian-rincon.github.io/ames-housing-ml/SAVI_v2_ParcialFinal.html) | XGBoost, PyTorch, MDP, DQN | 🟢 Active |
 | [ShopStream](https://github.com/Julian-Rincon/shopstream-bigdata) | AWS Big Data pipeline: 2.5M events, Lambda, EMR/PySpark, Glue ETL, RDS, Flask/Zappa, CI/CD | PySpark, Lambda, Glue, EMR, Zappa | ✅ Done |
 | Project Dogma | Stochastic social simulation: Markov Chains + HMM + Nash Equilibrium + Monte Carlo | TypeScript, React, Game Theory | ✅ Done |
@@ -168,7 +175,7 @@ julian = {
 
 ## Currently Building
 
-- **Jarvis** — In production daily (TieredBrain: Ollama/Groq/Gemini, 16 skills, meeting agent, desktop vision agent, ChromaDB episodic memory). Actively expanding: deeper calendar/email automation, enhanced gaming mode, improved episodic memory pipeline
+- **NEXUS** — In production daily. Actively expanding: deeper calendar/email automation, enhanced dev-workflow skills, broader MCP tool exposure for multi-agent orchestration
 - **Internship Automation Pipeline** — LLM-scored job discovery across GetOnBoard + ATS sources, Telegram daily digest via n8n, Railway deploy
 - **Next target:** ML Engineering or Data Engineering internship · MSc application Germany
 
@@ -178,7 +185,7 @@ julian = {
 
 **Universidad Sergio Arboleda** — Bogotá, Colombia
 
-*B.Sc. Computer Science & Artificial Intelligence* · 9th semester of 9 · 2021 – present
+*B.Sc. Computer Science & Artificial Intelligence* · 8th semester · 2021 – present
 
 | Certification | Issuer | Date |
 |---|---|---|
