@@ -19,13 +19,13 @@
 
 I don't build demos. I build systems that run.
 
-9th-semester CS & AI student at Universidad Sergio Arboleda, working at the intersection of machine learning engineering, distributed data infrastructure, and autonomous AI systems. My stack runs on real AWS infrastructure and a Linux workstation — not just notebooks.
+8th-semester CS & AI student at Universidad Sergio Arboleda, working at the intersection of machine learning engineering, distributed data infrastructure, and autonomous AI systems. My stack runs on real AWS infrastructure and a Linux workstation — not just notebooks.
 
 ```python
 julian = {
     "focus":    ["ML Engineering", "Data Engineering", "Autonomous Agents", "Stochastic Systems"],
     "building": [
-        "NEXUS — autonomous personal AI system (5-tier LLM routing, 36 skills, MCP server)",
+        "NEXUS — autonomous personal AI system (5-tier LLM routing, 38 skills, GCP hybrid, MCP server)",
         "SAVI v2     — autonomous valuation via RL pipeline (MDP → Q-Learning → DQN)",
         "ShopStream  — end-to-end AWS Big Data pipeline (Lambda → EMR → Glue → RDS)",
         "Dogma       — stochastic social propagation engine (Markov + HMM + Nash)",
@@ -77,18 +77,19 @@ julian = {
 
 ### 🤖 [NEXUS](https://github.com/Julian-Rincon/NEXUS-Public) — Autonomous Personal AI System `🟢 Active`
 
-> Built a production-grade personal AI system on Linux that manages the machine, not just conversation. Evolved from a voice assistant into a 5-tier LLM routing system with 36 self-discovered skills, an MCP server exposing its own capabilities as tools for other AI agents, and safety-gated automation across home, finance, and dev workflows.
+> Built a production-grade personal AI system on Linux that manages the machine, not just conversation. Evolved from a voice assistant into a 5-tier LLM routing system (Ollama → Groq → Cerebras 2600 tok/s → NVIDIA NIM 128K-context multimodal → Gemini) with 38 self-discovered skills, a hybrid GCP/local deployment with automated cost governance, an MCP server exposing its own capabilities as tools for other AI agents, and safety-gated automation across home, finance, and dev workflows.
 
-**Architecture:** `5-tier LLM routing (local + cloud fast + large-context multimodal + fallback) → Skill Engine (36 auto-discovered) → MCP Server → Native Desktop HUD`
+**Architecture:** `5-tier LLM routing (Cerebras + NVIDIA NIM) → Skill Engine (38 auto-discovered) → MCP Server → GCP Hybrid Deploy → Native Desktop HUD`
 
 **Technical highlights:**
 - MCP server exposing NEXUS capabilities as tools for external AI agents
+- Hybrid cloud/local architecture on a free-tier GCP VM (Tailscale tunnel, service-account impersonation) running core services 24/7, with automated cost-guard cutoff against the free-tier limit
 - Home automation (IoT), personal finance parsing (bank email summaries), and passive security monitoring (process/port/USB/auth anomaly detection) — all active in daily use
 - Dev-workflow automation: test runner, log triage, build, natural-language code generation with validation
 - Safety-first design: confirmation-gated system power control, allowlisted automation, passive-only monitoring
-- Custom-trained wake word and cloned-voice TTS with local fallback
+- Custom-trained wake word (ONNX, no PyTorch) and cloned voice via ElevenLabs with local fallback
 
-`Python 3.11` `MCP` `Whisper` `ChromaDB` `OAuth2` `Native Desktop HUD`
+`Python 3.11` `MCP` `GCP` `Cerebras` `NVIDIA NIM` `ChromaDB` `Native Desktop HUD`
 
 ---
 
@@ -136,7 +137,7 @@ julian = {
 
 | Project | Description | Stack | Status |
 |---------|-------------|-------|--------|
-| [NEXUS](https://github.com/Julian-Rincon/NEXUS-Public) | Autonomous personal AI system: 5-tier LLM routing, 36 skills, MCP server, home/finance/security automation | Python, MCP, Whisper, ChromaDB | 🟢 Active |
+| [NEXUS](https://github.com/Julian-Rincon/NEXUS-Public) | Autonomous personal AI system: 5-tier LLM routing, 38 skills, GCP hybrid deploy, MCP server, home/finance/security automation | Python, MCP, GCP, Cerebras, NVIDIA NIM | 🟢 Active |
 | [SAVI v2](https://github.com/Julian-Rincon/ames-housing-ml) | Full RL pipeline (MDP → Q-Learning → DQN) for autonomous real estate valuation. XGBoost R²=0.9609 · [Demo](https://julian-rincon.github.io/ames-housing-ml/SAVI_v2_ParcialFinal.html) | XGBoost, PyTorch, MDP, DQN | 🟢 Active |
 | [ShopStream](https://github.com/Julian-Rincon/shopstream-bigdata) | AWS Big Data pipeline: 2.5M events, Lambda, EMR/PySpark, Glue ETL, RDS, Flask/Zappa, CI/CD | PySpark, Lambda, Glue, EMR, Zappa | ✅ Done |
 | Project Dogma | Stochastic social simulation: Markov Chains + HMM + Nash Equilibrium + Monte Carlo | TypeScript, React, Game Theory | ✅ Done |
