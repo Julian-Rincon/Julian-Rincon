@@ -19,7 +19,7 @@
 
 I don't build demos. I build systems that run.
 
-8th-semester CS & AI student at Universidad Sergio Arboleda, working at the intersection of machine learning engineering, distributed data infrastructure, and autonomous AI systems. My stack runs on real AWS infrastructure and a Linux workstation — not just notebooks.
+9th-semester (final term) CS & AI student at Universidad Sergio Arboleda, working at the intersection of machine learning engineering, distributed data infrastructure, and autonomous AI systems. My stack runs on real AWS infrastructure and a Linux workstation — not just notebooks.
 
 ```python
 julian = {
@@ -95,6 +95,8 @@ julian = {
 
 ### 🏠 [SAVI v2 — Autonomous Real Estate Valuation](https://github.com/Julian-Rincon/ames-housing-ml) · [Live Demo](https://julian-rincon.github.io/ames-housing-ml/SAVI_v2_ParcialFinal.html) `🟢 Active`
 
+*Team project — with Valeria Larea, Nicolás Garzón, and Juan Niño, for our Machine Learning course.*
+
 > Architected a full Reinforcement Learning pipeline that moves beyond price prediction into autonomous risk-based decision making. Three RL agents trained in sequence — consensus policy determines the final APPROVE / REVIEW / REJECT verdict.
 
 **Pipeline:** `K-Means segmentation → XGBoost pricing (R²=0.9609) → MDP Value Iteration (259 iter) → Q-Learning tabular (8K episodes) → Double DQN PyTorch (150 epochs) → Consensus policy`
@@ -138,10 +140,10 @@ julian = {
 | Project | Description | Stack | Status |
 |---------|-------------|-------|--------|
 | [NEXUS](https://github.com/Julian-Rincon/NEXUS-Public) | Autonomous personal AI system: 5-tier LLM routing, 38 skills, GCP hybrid deploy, MCP server, home/finance/security automation | Python, MCP, GCP, Cerebras, NVIDIA NIM | 🟢 Active |
-| [SAVI v2](https://github.com/Julian-Rincon/ames-housing-ml) | Full RL pipeline (MDP → Q-Learning → DQN) for autonomous real estate valuation. XGBoost R²=0.9609 · [Demo](https://julian-rincon.github.io/ames-housing-ml/SAVI_v2_ParcialFinal.html) | XGBoost, PyTorch, MDP, DQN | 🟢 Active |
+| [SAVI v2](https://github.com/Julian-Rincon/ames-housing-ml) | Full RL pipeline (MDP → Q-Learning → DQN) for autonomous real estate valuation. XGBoost R²=0.9609 · [Demo](https://julian-rincon.github.io/ames-housing-ml/SAVI_v2_ParcialFinal.html) · team project | XGBoost, PyTorch, MDP, DQN | 🟢 Active |
 | [ShopStream](https://github.com/Julian-Rincon/shopstream-bigdata) | AWS Big Data pipeline: 2.5M events, Lambda, EMR/PySpark, Glue ETL, RDS, Flask/Zappa, CI/CD | PySpark, Lambda, Glue, EMR, Zappa | ✅ Done |
 | Project Dogma | Stochastic social simulation: Markov Chains + HMM + Nash Equilibrium + Monte Carlo | TypeScript, React, Game Theory | ✅ Done |
-| [Chinook Cloud Platform](https://github.com/Julian-Rincon/chinook-fullstack) | React + FastAPI on EC2, Terraform IaC, Glue → Athena → Power BI star schema | AWS, Terraform, FastAPI, Glue | ✅ Done |
+| [Chinook Cloud Platform](https://github.com/Julian-Rincon/chinook-cloud-platform) | React + FastAPI on EC2, Terraform IaC, Glue → Athena → Power BI star schema · team project with Juan Hurtado & David Martinez | AWS, Terraform, FastAPI, Glue | ✅ Done |
 | [ML DSL with ANTLR4](https://github.com/Julian-Rincon/Proyecto-Final-L) | Custom language for ML workflows: regression, MLP, clustering, plots | Python, ANTLR4, scikit-learn | ✅ Done |
 | [HPC Workshops](https://github.com/Julian-Rincon/HPC) | TSP brute force, Sobel edge detection, video processing, distributed TSP with Docker Swarm | Python, Docker Swarm | ✅ Done |
 | [Network Traffic Analysis](https://github.com/Julian-Rincon/Analisis-de-Trafico-de-Red-con-PowerShell-y-Python) | 1.5h real traffic capture, heavy-tail analysis on 384K files | Python, PowerShell, Pandas | ✅ Done |
@@ -186,7 +188,7 @@ julian = {
 
 **Universidad Sergio Arboleda** — Bogotá, Colombia
 
-*B.Sc. Computer Science & Artificial Intelligence* · 8th semester · 2021 – present
+*B.Sc. Computer Science & Artificial Intelligence* · 9th semester of 9 (final term) · 2021 – present
 
 | Certification | Issuer | Date |
 |---|---|---|
