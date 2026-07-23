@@ -28,7 +28,6 @@ julian = {
         "NEXUS — autonomous personal AI system (5-tier LLM routing, 38 skills, GCP hybrid, MCP server)",
         "SAVI v2     — autonomous valuation via RL pipeline (MDP → Q-Learning → DQN)",
         "ShopStream  — end-to-end AWS Big Data pipeline (Lambda → EMR → Glue → RDS)",
-        "Dogma       — stochastic social propagation engine (Markov + HMM + Nash)",
     ],
     "stack":    ["Python", "PySpark", "PyTorch", "AWS", "Terraform", "FastAPI", "TypeScript"],
     "won":      ["USABOT Robotics Challenge — 1st Place Overall (Nov 2025)",
@@ -119,22 +118,6 @@ julian = {
 
 ---
 
-### 🎲 Project Dogma — Stochastic Social Propagation Engine `✅ Done`
-
-> Built a mathematically rigorous simulation of ideological propagation across an urban social graph. Four distinct mathematical models govern every layer of the system.
-
-**Mathematical architecture:**
-- **Dynamic Markov Chains** — agent state transitions (Neutral → Believer → Fanatic) modulated by solitude, skepticism, and charisma variables
-- **Hidden Markov Model (Forward algorithm)** — authority behavior inferred from latent states via observable Heat entropy signal
-- **Verhulst Logistic Differential Equation** — resource carrying capacity K generating natural S-curve propagation
-- **Nash Equilibrium (2×2 mixed strategy, 55%/45%)** — schism resolution eliminating dominant pure strategies
-
-**Validation:** 500 Monte Carlo simulations · μ=152 ticks · conversion 5.42 agents/tick (σ=0.39) · retention ratio 38:1
-
-`TypeScript` `React` `Markov Chains` `HMM` `Game Theory` `Monte Carlo`
-
----
-
 ## All Projects
 
 | Project | Description | Stack | Status |
@@ -142,7 +125,7 @@ julian = {
 | [NEXUS](https://github.com/Julian-Rincon/NEXUS-Public) | Autonomous personal AI system: 5-tier LLM routing, 38 skills, GCP hybrid deploy, MCP server, home/finance/security automation | Python, MCP, GCP, Cerebras, NVIDIA NIM | 🟢 Active |
 | [SAVI v2](https://github.com/Julian-Rincon/ames-housing-ml) | Full RL pipeline (MDP → Q-Learning → DQN) for autonomous real estate valuation. XGBoost R²=0.9609 · [Demo](https://julian-rincon.github.io/ames-housing-ml/SAVI_v2_ParcialFinal.html) · team project | XGBoost, PyTorch, MDP, DQN | 🟢 Active |
 | [ShopStream](https://github.com/Julian-Rincon/shopstream-bigdata) | AWS Big Data pipeline: 2.5M events, Lambda, EMR/PySpark, Glue ETL, RDS, Flask/Zappa, CI/CD | PySpark, Lambda, Glue, EMR, Zappa | ✅ Done |
-| Project Dogma | Stochastic social simulation: Markov Chains + HMM + Nash Equilibrium + Monte Carlo | TypeScript, React, Game Theory | ✅ Done |
+| Project Dogma | Team project (led by a classmate): stochastic social propagation simulator. Presented at Data Fest — Universidad Sergio Arboleda ([Rulo Científico](https://www.instagram.com/p/DYU3Q1BlUdn/)). No public repo. | TypeScript, React | — |
 | [Chinook Cloud Platform](https://github.com/Julian-Rincon/chinook-cloud-platform) | React + FastAPI on EC2, Terraform IaC, Glue → Athena → Power BI star schema · team project with Juan Hurtado & David Martinez | AWS, Terraform, FastAPI, Glue | ✅ Done |
 | [ML DSL with ANTLR4](https://github.com/Julian-Rincon/Proyecto-Final-L) | Custom language for ML workflows: regression, MLP, clustering, plots | Python, ANTLR4, scikit-learn | ✅ Done |
 | [HPC Workshops](https://github.com/Julian-Rincon/HPC) | TSP brute force, Sobel edge detection, video processing, distributed TSP with Docker Swarm | Python, Docker Swarm | ✅ Done |
