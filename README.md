@@ -201,7 +201,7 @@ julian = {
 
 **Universidad Sergio Arboleda** — Bogotá, Colombia
 
-*B.Sc. Computer Science & Artificial Intelligence* · 9th semester of 9 (final term) · 2021 – present
+*B.Sc. Computer Science & Artificial Intelligence* · 9th semester of 9 (final term) · 2022 – present
 
 | Certification | Issuer | Date |
 |---|---|---|
