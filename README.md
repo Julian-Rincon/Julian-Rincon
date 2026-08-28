@@ -23,13 +23,14 @@ I don't build demos. I build systems that run.
 
 ```python
 julian = {
-    "focus":    ["ML Engineering", "Data Engineering", "Autonomous Agents", "Stochastic Systems"],
+    "focus":    ["ML Engineering", "Data Engineering", "Autonomous Agents", "Distributed Systems"],
     "building": [
-        "NEXUS — autonomous personal AI system (5-tier LLM routing, 38 skills, GCP hybrid, MCP server)",
+        "NEXUS       — autonomous personal AI system (5-tier LLM routing, 38 skills, GCP hybrid, MCP server)",
+        "Victor      — voice-driven AI race engineer, Linux-native (LLM failover, 143 tests, CI green)",
         "SAVI v2     — autonomous valuation via RL pipeline (MDP → Q-Learning → DQN)",
-        "ShopStream  — end-to-end AWS Big Data pipeline (Lambda → EMR → Glue → RDS)",
+        "Ayuda Terremoto Colombia — distributed humanitarian coordination (offline-first, 80+ tests)",
     ],
-    "stack":    ["Python", "PySpark", "PyTorch", "AWS", "Terraform", "FastAPI", "TypeScript"],
+    "stack":    ["Python", "C", "PySpark", "PyTorch", "AWS", "FastAPI", "TypeScript", "spaCy"],
     "won":      ["USABOT Robotics Challenge — 1st Place Overall (Nov 2025)",
                  "Wisibilízalas, Univ. Pompeu Fabra — 1st Place (WarmiTics)"],
     "goal":     "ML/Data Engineering internship → MSc in Germany",
@@ -106,6 +107,22 @@ julian = {
 
 ---
 
+### 🏎️ [Victor — Voice-Driven AI Race Engineer](https://github.com/Julian-Rincon/victor-race-engineer) `🟢 Active`
+
+> A native-Linux alternative to CrewChief for Assetto Corsa. A C reader running under the same Wine/Proton prefix as the game pulls telemetry directly from AC's shared memory — the same source CrewChief uses — while a Linux daemon runs a deterministic spotter, fuel/tyre alerts, and pit strategy, and answers free-form voice questions in Spanish through a 4-provider LLM chain with a circuit breaker.
+
+**Architecture:** `C SHM reader (Wine/Proton) → JSON on disk → Linux daemon → Groq → Cerebras → NVIDIA NIM → Gemini (failover) → Piper TTS`
+
+**Technical highlights:**
+- Deterministic, no-LLM spotter (150ms debounce) for real-time car-alongside alerts
+- Chained LLM failover across 4 providers with a per-provider circuit breaker, so a single outage doesn't kill the assistant mid-race
+- Native Linux speech recognition and synthesis — no Windows Speech Recognition anywhere in the pipeline
+- 143 tests, CI green on Python 3.10 and 3.12; a written case study documents the architecture trade-offs, including what's still unmeasured
+
+`Python` `C` `Wine/Proton` `Groq` `Cerebras` `NVIDIA NIM` `Piper TTS` `pytest`
+
+---
+
 ### 🛒 [ShopStream — AWS Big Data Pipeline](https://github.com/Julian-Rincon/shopstream-bigdata) `✅ Done`
 
 > Engineered a production-grade end-to-end data pipeline for a fictional e-commerce platform on AWS. Every layer is instrumented, tested, and deployed via CI/CD.
@@ -123,13 +140,25 @@ julian = {
 | Project | Description | Stack | Status |
 |---------|-------------|-------|--------|
 | [NEXUS](https://github.com/Julian-Rincon/NEXUS-Public) | Autonomous personal AI system: 5-tier LLM routing, 38 skills, GCP hybrid deploy, MCP server, home/finance/security automation | Python, MCP, GCP, Cerebras, NVIDIA NIM | 🟢 Active |
+| [Victor](https://github.com/Julian-Rincon/victor-race-engineer) | Voice-driven AI race engineer for Assetto Corsa, native on Linux. C SHM reader under Wine/Proton, 4-provider LLM failover, deterministic spotter. 143 tests, CI green | Python, C, Wine/Proton, Groq | 🟢 Active |
 | [SAVI v2](https://github.com/Julian-Rincon/ames-housing-ml) | Full RL pipeline (MDP → Q-Learning → DQN) for autonomous real estate valuation. XGBoost R²=0.9609 · [Demo](https://julian-rincon.github.io/ames-housing-ml/SAVI_v2_ParcialFinal.html) · team project | XGBoost, PyTorch, MDP, DQN | 🟢 Active |
+| [Ayuda Terremoto Colombia](https://github.com/Julian-Rincon/ayuda-terremoto-colombia) | Distributed humanitarian coordination system built around a simulated Colombia earthquake scenario: FastAPI/Postgres national node + offline-first React/IndexedDB field node, 80+ backend tests | FastAPI, PostgreSQL, React, IndexedDB | 🟢 Active |
 | [ShopStream](https://github.com/Julian-Rincon/shopstream-bigdata) | AWS Big Data pipeline: 2.5M events, Lambda, EMR/PySpark, Glue ETL, RDS, Flask/Zappa, CI/CD | PySpark, Lambda, Glue, EMR, Zappa | ✅ Done |
+| [NLP Pipeline API](https://github.com/Julian-Rincon/nlp-pipeline-api) | spaCy/FastAPI NLP microservice (POS, NER, dependency parsing, from-scratch TF-IDF/BoW vectorizer), deployed to AWS Lambda · team project | Python, spaCy, FastAPI, AWS Lambda | ✅ Done |
 | Project Dogma | Team project (led by a classmate): stochastic social propagation simulator. Presented at Data Fest — Universidad Sergio Arboleda ([Rulo Científico](https://www.instagram.com/p/DYU3Q1BlUdn/)). No public repo. | TypeScript, React | — |
 | [Chinook Cloud Platform](https://github.com/Julian-Rincon/chinook-cloud-platform) | React + FastAPI on EC2, Terraform IaC, Glue → Athena → Power BI star schema · team project with Juan Hurtado & David Martinez | AWS, Terraform, FastAPI, Glue | ✅ Done |
 | [ML DSL with ANTLR4](https://github.com/Julian-Rincon/Proyecto-Final-L) | Custom language for ML workflows: grammar + interpreter that trains/evaluates a K-Means model | Python, ANTLR4, scikit-learn | ✅ Done |
 | [HPC Workshops](https://github.com/Julian-Rincon/HPC) | TSP brute force, Sobel edge detection, video processing, distributed TSP with Docker Swarm | Python, Docker Swarm | ✅ Done |
 | [Network Traffic Analysis](https://github.com/Julian-Rincon/Analisis-de-Trafico-de-Red-con-PowerShell-y-Python) | 1.5h real traffic capture, heavy-tail analysis on 384K files | Python, PowerShell, Pandas | ✅ Done |
+
+---
+
+## Freelance / Client Work
+
+| Project | Description | Stack |
+|---------|-------------|-------|
+| Zafra CRM | AI-assisted CRM built for a real client (Zafra Asesores Tributarios, a tax-advisory firm) — FastAPI/SQLAlchemy backend, React frontend, Groq/Llama 3.3 70B for summaries and lead scoring, WhatsApp Cloud API bot. Built and demoed; auth and continuous deployment are still open before production use. | FastAPI, SQLAlchemy, React, Groq |
+| ReushiGo | Full-stack ordering platform for a family coffee-distribution business — React/Prisma/Express, a Telegram sales bot, admin-key auth, rate limiting, GitHub Actions CI, and its own security-review doc. Private repo. | React, Express, Prisma, Telegram Bot API |
 
 ---
 
@@ -162,7 +191,8 @@ julian = {
 ## Currently Building
 
 - **NEXUS** — In production daily. Actively expanding: deeper calendar/email automation, enhanced dev-workflow skills, broader MCP tool exposure for multi-agent orchestration
-- **Internship Automation Pipeline** — LLM-scored job discovery across GetOnBoard + ATS sources, Telegram daily digest via n8n, Railway deploy
+- **Victor** — daily driver for my own sim-racing sessions; next up is instrumenting per-stage latency for the voice pipeline
+- **Internship Discovery Pipeline** — rule-based job scoring across GetOnBoard + ATS sources, Telegram daily digest via n8n (LLM-based scoring is a planned next step, not built yet)
 - **Next target:** ML Engineering or Data Engineering internship · MSc application Germany
 
 ---
