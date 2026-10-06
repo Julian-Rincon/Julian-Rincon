@@ -30,6 +30,7 @@ julian = {
     "shipped":  [
         "SAVI v3  - RL + RAG valuation agent on an event-driven AWS pipeline (live demo)",
         "Phantom  - local multi-agent workspace for Claude Code, OpenCode and Hermes",
+        "NEXUS v2 - personal AI assistant on Phantom: briefing, voice, shared memory, copilot",
         "ShopStream - 2.5M-event Big Data pipeline on AWS (Lambda, EMR, Glue, RDS)",
     ],
     "stack":    ["Python", "PyTorch", "XGBoost", "PySpark", "AWS", "FastAPI", "Rust", "TypeScript"],
@@ -66,10 +67,26 @@ An Automated Valuation Model predicts a house price; SAVI decides **when a lende
 
 One local interface for **Claude Code, OpenCode and Hermes Agent**: a single timeline, one agent/model selector and delegation between agents through `@Agent` mentions. Built on [my fork](https://github.com/Julian-Rincon/codeg) of the open-source Codeg workspace (Apache-2.0) instead of rewriting its ACP client, streaming and permissions layer.
 
-- **What I added:** OpenCode 2.x history import, a model scorecard that ranks models from measured session history (Wilson 95 % interval) and drives model-aware delegation and quota failover, a hands-free voice mode (Whisper large-v3-turbo on CUDA + Kokoro TTS, fully local), a Telegram bridge that survives restarts, and **Phantom Island**, a Tauri overlay rendered as a native Wayland layer-shell surface.
-- **Operations:** runs as hardened systemd user services bound to loopback with token auth and resource limits, integrated with KDE Plasma; the fork is kept merged with upstream releases (v0.32.4, v0.33.0).
+- **What I added:** OpenCode 2.x history import, a model scorecard that ranks models from measured session history (Wilson 95 % interval) and drives model-aware delegation and quota failover, a fully local voice layer (Whisper large-v3-turbo on CUDA for speech-to-text, a distinct voice per agent with Chatterbox and Kokoro, and a "listen" button on every answer), a compact Telegram bridge with conversation menus, and **Phantom Island**, a Tauri overlay rendered as a native Wayland layer-shell surface.
+- **Operations:** runs as hardened systemd user services bound to loopback with token auth and resource limits, integrated with KDE Plasma, and reachable from my phone (chat and voice) only through a private Tailscale network over HTTPS. A deploy script verifies 12 checks after every install, and the fork is kept merged with upstream releases (v0.32.4, v0.33.0).
 
 `Rust` `TypeScript` `Next.js` `Tauri` `MCP` `ACP` `Whisper` `systemd` `KDE Plasma`
+
+---
+
+### [NEXUS v2 — Personal AI Assistant](https://github.com/Julian-Rincon/NEXUS-Public) · `Active`
+
+[![NEXUS](assets/projects/nexus.jpg)](https://github.com/Julian-Rincon/NEXUS-Public)
+
+My personal AI assistant, rebuilt in October 2026 as a small personal layer (~1,900 lines of Python, 110 tests) on top of Phantom instead of a standalone app. Phantom provides the agents, models, UI and voice; NEXUS provides context, memory and initiative.
+
+- **Daily briefing** from calendar, inbox headers, tasks and service status, sent to Telegram and the desktop; two systemd timers re-run it on another agent if a free model runs out of quota.
+- **Shared memory** (SQLite full-text search over MCP) that Claude Code, OpenCode and Hermes all read and write — verified by having one agent store a random number and a different agent, on a different provider, retrieve it.
+- **Project copilot** on every repository: when a commit breaks the tests, an agent fixes it in an isolated git worktree, Claude reviews the diff and re-runs the tests, and only then is it merged. It never pushes or force-merges.
+- **Push-to-talk voice** (Meta+N, local Whisper, its own voice), and a dependency-free watchdog on a free-tier cloud VM that alerts when a service goes down. No root access anywhere.
+- **Why v2:** v1 (2025 – 2026) was a ~47,000-line monolith with a hand-written 5-provider router and an always-on wake word that was never reliable enough to depend on. v2 keeps the goals with a fraction of the code. Source is private; the public repo documents the design with real screenshots.
+
+`Python` `MCP` `SQLite FTS5` `systemd` `Whisper` `Chatterbox` `Tailscale` `GCP`
 
 ---
 
@@ -105,9 +122,9 @@ Independent, open-source humanitarian coordination system built after the real M
 React + FastAPI on EC2 with private RDS via Terraform, extended into a Glue → Athena → Power BI star schema. Team project with Juan Hurtado and David Martinez.
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/Julian-Rincon/NEXUS-Public"><img src="assets/projects/nexus.jpg" alt="NEXUS"></a>
-<b><a href="https://github.com/Julian-Rincon/NEXUS-Public">NEXUS</a></b> · <code>Archived</code><br/>
-Personal AI system that managed my workstation from 2025 until I archived it in September 2026: 5-tier LLM routing, 38 auto-discovered skills, an MCP server and a hybrid GCP deployment. Source closed by design; the public repo documents the architecture.
+<a href="https://github.com/Julian-Rincon/sentiment140-lab2"><img src="assets/projects/sentiment140.jpg" alt="Sentiment140 Lab"></a>
+<b><a href="https://github.com/Julian-Rincon/sentiment140-lab2">Sentiment140 Lab</a></b> · <code>Finished</code><br/>
+Sentiment classification compared stage by stage under a fixed protocol in MLflow; champion model (TF-IDF + logistic regression, test macro-F1 0.824) registered and served by a public FastAPI. Team of five.
 </td>
 </tr>
 <tr>
@@ -117,9 +134,9 @@ Personal AI system that managed my workstation from 2025 until I archived it in 
 spaCy/FastAPI microservice (POS, NER, dependency parsing) with TF-IDF/BoW vectorizers written from scratch, deployed on EC2 and AWS Lambda. Scored 93/100 in a live evaluation. Team project.
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/Julian-Rincon/sentiment140-lab2"><img src="assets/projects/sentiment140.jpg" alt="Sentiment140 Lab"></a>
-<b><a href="https://github.com/Julian-Rincon/sentiment140-lab2">Sentiment140 Lab</a></b> · <code>Finished</code><br/>
-Sentiment classification compared stage by stage under a fixed protocol in MLflow; champion model (TF-IDF + logistic regression, test macro-F1 0.824) registered and served by a public FastAPI. Team of five.
+<a href="https://github.com/Julian-Rincon/dino-island-lab2"><img src="assets/projects/dino-island.jpg" alt="Dino Island"></a>
+<b><a href="https://github.com/Julian-Rincon/dino-island-lab2">Dino Island</a></b> · <code>Finished</code><br/>
+Four chained generative stages: a character-level GRU (chosen over an LSTM by validation loss) invents a dinosaur name, gemma4 via Ollama on SageMaker writes its identity, aMUSEd draws it, and a Lambda web app lets you chat with it. Team of five.
 </td>
 </tr>
 </table>
@@ -132,13 +149,14 @@ Sentiment classification compared stage by stage under a fixed protocol in MLflo
 |---------|-------------|-------|--------|
 | [SAVI](https://github.com/Julian-Rincon/ames-housing-ml) | RL + RAG real-estate valuation agent on an event-driven AWS pipeline. R²(log) 0.921, 191 tests, [live demo](https://5w442qdw5roag3chtm6esbohfu0mwaap.lambda-url.us-east-1.on.aws/). v1–v2 team, v3 individual | XGBoost, PyTorch, AWS Lambda/EC2/SageMaker, Claude | Finished |
 | [Phantom](https://github.com/Julian-Rincon/phantom) | Local multi-agent workspace for Claude Code, OpenCode and Hermes on a Codeg fork: measured model routing, voice mode, Telegram bridge, Wayland overlay | Rust, TypeScript, Tauri, MCP | Active |
+| [NEXUS v2](https://github.com/Julian-Rincon/NEXUS-Public) | Personal AI assistant as a layer on Phantom: daily briefing, push-to-talk voice, memory shared across agents, test-fixing copilot, cloud watchdog. 110 tests, no root. v1 (2025 – 2026) archived | Python, MCP, SQLite, systemd | Active |
 | [Victor](https://github.com/Julian-Rincon/victor-race-engineer) | Voice-driven AI race engineer for Assetto Corsa on Linux. C SHM reader under Proton, 4-provider LLM failover, 143 tests | Python, C, Wine/Proton | Active |
 | [Ayuda Terremoto Colombia](https://github.com/Julian-Rincon/ayuda-terremoto-colombia) | Offline-first humanitarian coordination after the M7.4 Chocó earthquake. 80+ backend tests, open to contributors | FastAPI, PostgreSQL, React, IndexedDB | Active |
 | [ShopStream](https://github.com/Julian-Rincon/shopstream-bigdata) | AWS Big Data pipeline: 2.5M events, Lambda, EMR/PySpark, Glue ETL, RDS, Flask/Zappa, CI/CD | PySpark, Lambda, EMR, Glue | Finished |
 | [Sentiment140 Lab](https://github.com/Julian-Rincon/sentiment140-lab2) | MLflow-tracked sentiment classification, champion model served by FastAPI on EC2 (macro-F1 0.824) · team of five | scikit-learn, MLflow, FastAPI | Finished |
+| [Dino Island](https://github.com/Julian-Rincon/dino-island-lab2) | Generative pipeline: char-level GRU names → gemma4 on SageMaker identity → aMUSEd image → chat, served by AWS Lambda · team of five | PyTorch, Ollama, SageMaker, Lambda | Finished |
 | [NLP Pipeline API](https://github.com/Julian-Rincon/nlp-pipeline-api) | spaCy/FastAPI NLP microservice with from-scratch vectorizers, on EC2 and AWS Lambda · team project | spaCy, FastAPI, AWS Lambda | Finished |
 | [Chinook Cloud Platform](https://github.com/Julian-Rincon/chinook-cloud-platform) | React + FastAPI on EC2, Terraform IaC, Glue → Athena → Power BI star schema · team of three | AWS, Terraform, FastAPI, Glue | Finished |
-| [NEXUS](https://github.com/Julian-Rincon/NEXUS-Public) | Personal AI system: 5-tier LLM routing, 38 skills, MCP server, GCP hybrid deploy (2025 – 2026) | Python, MCP, GCP | Archived |
 | [ML DSL with ANTLR4](https://github.com/Julian-Rincon/Proyecto-Final-L) | Custom language for ML workflows: grammar + interpreter that trains and evaluates a K-Means model | Python, ANTLR4, scikit-learn | Finished |
 | [HPC Workshops](https://github.com/Julian-Rincon/HPC) | TSP brute force, Sobel edge detection, video processing, distributed TSP on Docker Swarm · with Paula Caballero | Python, Docker Swarm | Finished |
 | [Network Traffic Analysis](https://github.com/Julian-Rincon/Analisis-de-Trafico-de-Red-con-PowerShell-y-Python) | 1.5 h real traffic capture, heavy-tail analysis over 384K files | Python, PowerShell, Pandas | Finished |
