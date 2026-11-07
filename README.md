@@ -1,7 +1,7 @@
 <div align="center">
 
 <h1>Julian Rincón</h1>
-<h3>ML Engineering · Data Engineering · AI Agents · Cloud Systems</h3>
+<h3>Data Science · Data Analytics · ML/AI Engineering · Software Development</h3>
 
 <br/>
 
@@ -17,25 +17,26 @@
 
 ## About
 
-I don't build demos. I build systems that run.
+**Demos impress once. I build systems that keep running.**
 
-Final-semester (9th of 9) Computer Science & Artificial Intelligence student at Universidad Sergio Arboleda, Bogotá. I work where machine learning, data infrastructure and AI agents meet: event-driven pipelines on AWS, models evaluated honestly on held-out data, and agent tooling that I use every day on my own Linux workstation.
+Final-semester (9th of 9) Computer Science & Artificial Intelligence student at Universidad Sergio Arboleda, Bogotá. I work across the whole data cycle: I clean and analyze data with SQL and Python, build PySpark pipelines on AWS, train models with cross-validation and a single held-out test, and ship them as tested services and LLM agents, some of which I use every day on my own Linux workstation.
 
-Looking for a six-month **ML / Data Engineering internship (January – June 2027)**, and after graduating, an MSc in Germany.
+Looking for a six-month internship in **data science, data analytics, ML/AI engineering or software development (January – June 2027)**, and after graduating, an MSc in Germany.
 
 ```python
 julian = {
     "degree":   "B.Sc. CS & AI, final semester (9/9), GPA 4.04/5.0",
-    "focus":    ["ML Engineering", "Data Engineering", "AI Agents", "Cloud Systems"],
+    "focus":    ["Data Science", "Data Analytics", "ML/AI Engineering", "Software Development"],
     "shipped":  [
         "SAVI v3  - RL + RAG valuation agent on an event-driven AWS pipeline (live demo)",
+        "Sentiment140 - MLflow-tracked NLP model, macro-F1 0.824, served by FastAPI",
         "Phantom  - local multi-agent workspace for Claude Code, OpenCode and Hermes",
         "NEXUS v2 - personal AI assistant on Phantom: briefing, voice, shared memory, copilot",
         "ShopStream - 2.5M-event Big Data pipeline on AWS (Lambda, EMR, Glue, RDS)",
     ],
-    "stack":    ["Python", "PyTorch", "XGBoost", "PySpark", "AWS", "FastAPI", "Rust", "TypeScript"],
+    "stack":    ["Python", "SQL", "PyTorch", "XGBoost", "PySpark", "AWS", "FastAPI", "TypeScript"],
     "won":      ["USABOT Robotics Challenge - 1st place overall (Nov 2025)",
-                 "Wisibilízalas, Univ. Pompeu Fabra - 1st place, international (2019)"],
+                 "Wisibilízalas, Pompeu Fabra University - 1st place, international (2019)"],
     "open_to":  ["internships", "research collaborations", "freelance"],
 }
 ```
@@ -51,42 +52,28 @@ julian = {
 An Automated Valuation Model predicts a house price; SAVI decides **when a lender should trust it**. Reinforcement learning chooses whether to APPROVE the automatic valuation, send it to human REVIEW, or REJECT it, based on the economic cost of being wrong.
 
 - **v1–v2 (team, Machine Learning course):** with Valeria Larea, Nicolás Garzón and Juan Niño — MDP + Value Iteration, Q-Learning, DQN and a consensus policy, IEEE-style paper.
-- **v3 (individual):** I audited v2, found that most of its dataset was padded assessor records (its R² = 0.96 was an artifact), rebuilt the data from real public sources (2,930 sales joined to 18,078 parcels, FHFA and Zillow indices), and re-engineered the project as an **event-driven AWS pipeline** (S3 → Lambda → EC2 → Lambda → SageMaker) with a **RAG agent** (8 tools, Claude tool use, deterministic fallback) served from a public Lambda URL.
+- **v3 (individual):** I audited v2, found that most of its dataset was padded assessor records (its R² = 0.96 was an artifact), rebuilt the data from real public sources (2,930 sales joined to 18,078 parcels, FHFA and Zillow indices), and re-engineered the project as an **event-driven AWS pipeline** (S3 → Lambda → EC2 → Lambda → SageMaker) with a **RAG agent** (8 tools; a deterministic planner by default, optional Claude/Groq mode).
 - **Results, measured honestly:** XGBoost AVM with 5-fold out-of-fold **R²(log) = 0.921, MAPE 7.8 %**; test results reported once with bootstrap 95 % CIs — the Double DQN overfits and no rule beats Value Iteration significantly, and the README says so.
-- **Engineering:** 191 tests, GitHub Actions CI, boto3 infrastructure as code, self-terminating EC2 and SageMaker Spot — a full run costs **under US$0.05**.
+- **Engineering:** 197 tests, GitHub Actions CI, boto3 infrastructure as code, self-terminating EC2 and SageMaker Spot — a full run costs **under US$0.05**.
 
-[Live demo](https://5w442qdw5roag3chtm6esbohfu0mwaap.lambda-url.us-east-1.on.aws/) · [Repository](https://github.com/Julian-Rincon/ames-housing-ml)
+- **Live demo:** the same Lambda handler runs in your browser through Pyodide on a free static Hugging Face Space, so it never sleeps and costs nothing. It uses the deterministic planner over the frozen v3 data.
+
+[Live demo](https://julianrincon-savi-agent.static.hf.space/) · [Repository](https://github.com/Julian-Rincon/ames-housing-ml)
 
 `Python` `XGBoost` `PyTorch` `Double DQN` `AWS Lambda` `EC2` `SageMaker` `S3` `RAG` `Claude API`
 
 ---
 
-### [Phantom — Local Multi-Agent Coding Workspace](https://github.com/Julian-Rincon/phantom) · `Active`
+### [Sentiment140 Lab — Reproducible NLP Experimentation](https://github.com/Julian-Rincon/sentiment140-lab2) · `Finished`
 
-[![Phantom](assets/projects/phantom.jpg)](https://github.com/Julian-Rincon/phantom)
+[![Sentiment140](assets/projects/sentiment140.jpg)](https://github.com/Julian-Rincon/sentiment140-lab2)
 
-One local interface for **Claude Code, OpenCode and Hermes Agent**: a single timeline, one agent/model selector and delegation between agents through `@Agent` mentions. Built on [my fork](https://github.com/Julian-Rincon/codeg) of the open-source Codeg workspace (Apache-2.0) instead of rewriting its ACP client, streaming and permissions layer.
+Team of five for our NLP course. With 1.6M tweets and many ways to model them, it is easy to end up picking whatever looks best on the test set, so we froze seeded partitions first and compared preprocessing, representation and classifier stage by stage against a dummy baseline under cross-validation, logging every run in MLflow and touching the test set exactly once.
 
-- **What I added:** OpenCode 2.x history import, a model scorecard that ranks models from measured session history (Wilson 95 % interval) and drives model-aware delegation and quota failover, a fully local voice layer (Whisper large-v3-turbo on CUDA for speech-to-text, a distinct voice per agent with Chatterbox and Kokoro, and a "listen" button on every answer), a compact Telegram bridge with conversation menus, and **Phantom Island**, a Tauri overlay rendered as a native Wayland layer-shell surface.
-- **Operations:** runs as hardened systemd user services bound to loopback with token auth and resource limits, integrated with KDE Plasma, and reachable from my phone (chat and voice) only through a private Tailscale network over HTTPS. A deploy script verifies 12 checks after every install, and the fork is kept merged with upstream releases (v0.32.4, v0.33.0).
+- **Result:** TF-IDF unigrams + bigrams with logistic regression won the ablation study, was retrained on 1.36M tweets and scored **macro-F1 0.824** on test, with an error analysis.
+- **My part:** the MLflow tracking server and Model Registry, the public FastAPI on EC2 that serves the champion model, and the audit notebook.
 
-`Rust` `TypeScript` `Next.js` `Tauri` `MCP` `ACP` `Whisper` `systemd` `KDE Plasma`
-
----
-
-### [NEXUS v2 — Personal AI Assistant](https://github.com/Julian-Rincon/NEXUS-Public) · `Active`
-
-[![NEXUS](assets/projects/nexus.jpg)](https://github.com/Julian-Rincon/NEXUS-Public)
-
-My personal AI assistant, rebuilt in October 2026 as a small personal layer (~1,900 lines of Python, 110 tests) on top of Phantom instead of a standalone app. Phantom provides the agents, models, UI and voice; NEXUS provides context, memory and initiative.
-
-- **Daily briefing** from calendar, inbox headers, tasks and service status, sent to Telegram and the desktop; two systemd timers re-run it on another agent if a free model runs out of quota.
-- **Shared memory** (SQLite full-text search over MCP) that Claude Code, OpenCode and Hermes all read and write — verified by having one agent store a random number and a different agent, on a different provider, retrieve it.
-- **Project copilot** on every repository: when a commit breaks the tests, an agent fixes it in an isolated git worktree, Claude reviews the diff and re-runs the tests, and only then is it merged. It never pushes or force-merges.
-- **Push-to-talk voice** (Meta+N, local Whisper, its own voice), and a dependency-free watchdog on a free-tier cloud VM that alerts when a service goes down. No root access anywhere.
-- **Why v2:** v1 (2025 – 2026) was a ~47,000-line monolith with a hand-written 5-provider router and an always-on wake word that was never reliable enough to depend on. v2 keeps the goals with a fraction of the code. Source is private; the public repo documents the design with real screenshots.
-
-`Python` `MCP` `SQLite FTS5` `systemd` `Whisper` `Chatterbox` `Tailscale` `GCP`
+`scikit-learn` `MLflow` `FastAPI` `EC2` `pandas` `NLP`
 
 ---
 
@@ -100,6 +87,35 @@ End-to-end data pipeline for a fictional e-commerce platform: 2.5M generated eve
 
 ---
 
+### [NEXUS v2 — Personal AI Assistant](https://github.com/Julian-Rincon/NEXUS-Public) · `Active`
+
+[![NEXUS](assets/projects/nexus.jpg)](https://github.com/Julian-Rincon/NEXUS-Public)
+
+My personal AI assistant, rebuilt in October 2026 as a personal layer (~12,000 lines of Python, 1,483 tests) on top of Phantom instead of a standalone app. Phantom provides the agents, models, UI and voice; NEXUS provides context, memory and initiative.
+
+- **Daily briefing** from calendar, inbox headers, tasks and service status, sent to Telegram and the desktop; two systemd timers re-run it on another agent if a free model runs out of quota.
+- **Shared memory** (SQLite full-text search over MCP) that Claude Code, OpenCode and Hermes all read and write — verified by having one agent store a random number and a different agent, on a different provider, retrieve it.
+- **Project copilot** on every repository: when a commit breaks the tests, an agent fixes it in an isolated git worktree, Claude reviews the diff and re-runs the tests, and only then is it merged. It never pushes or force-merges.
+- **Push-to-talk voice** (Meta+N, local Whisper, its own voice), and a dependency-free watchdog on a free-tier cloud VM that alerts when a service goes down. No root access anywhere.
+- **Why v2:** v1 (2025 – 2026) was a ~47,000-line monolith with a hand-written 5-provider router and an always-on wake word that was never reliable enough to depend on. v2 keeps the goals with a fraction of the code. Source is private; the public repo documents the design with real screenshots.
+
+`Python` `MCP` `SQLite FTS5` `systemd` `Whisper` `Chatterbox` `Tailscale` `GCP`
+
+---
+
+### [Phantom — Local Multi-Agent Coding Workspace](https://github.com/Julian-Rincon/phantom) · `Active`
+
+[![Phantom](assets/projects/phantom.jpg)](https://github.com/Julian-Rincon/phantom)
+
+One local interface for **Claude Code, OpenCode and Hermes Agent**: a single timeline, one agent/model selector and delegation between agents through `@Agent` mentions. Built on [my fork](https://github.com/Julian-Rincon/codeg) of the open-source Codeg workspace (Apache-2.0) instead of rewriting its ACP client, streaming and permissions layer.
+
+- **What I added:** OpenCode 2.x history import, a model scorecard that ranks models from measured session history (Wilson 95 % interval) and drives model-aware delegation and quota failover, a fully local voice layer (Whisper large-v3-turbo on CUDA for speech-to-text, a distinct voice per agent with Chatterbox and Kokoro, and a "listen" button on every answer), a compact Telegram bridge with conversation menus, and **Phantom Island**, a Tauri overlay rendered as a native Wayland layer-shell surface.
+- **Operations:** runs as hardened systemd user services bound to loopback with token auth and resource limits, integrated with KDE Plasma, and reachable from my phone (chat and voice) only through a private Tailscale network over HTTPS. A deploy script verifies 12 checks after every install, and the fork is kept merged with every upstream release.
+
+`Rust` `TypeScript` `Next.js` `Tauri` `MCP` `ACP` `Whisper` `systemd` `KDE Plasma`
+
+---
+
 ### More projects
 
 <table>
@@ -107,7 +123,7 @@ End-to-end data pipeline for a fictional e-commerce platform: 2.5M generated eve
 <td width="50%" valign="top">
 <a href="https://github.com/Julian-Rincon/victor-race-engineer"><img src="assets/projects/victor.jpg" alt="Victor"></a>
 <b><a href="https://github.com/Julian-Rincon/victor-race-engineer">Victor</a></b> · <code>Active</code><br/>
-Voice-driven AI race engineer for Assetto Corsa, native on Linux: a C shared-memory reader under Proton, a deterministic spotter, and a 4-provider LLM chain with circuit breakers. 143 tests, CI green.
+Voice-driven AI race engineer for Assetto Corsa, native on Linux: a C shared-memory reader under Proton, a deterministic spotter, and a 4-provider LLM chain with circuit breakers. 219 tests, CI green.
 </td>
 <td width="50%" valign="top">
 <a href="https://github.com/Julian-Rincon/ayuda-terremoto-colombia"><img src="assets/projects/ayuda-terremoto.jpg" alt="Ayuda Terremoto Colombia"></a>
@@ -122,21 +138,9 @@ Independent, open-source humanitarian coordination system built after the real M
 React + FastAPI on EC2 with private RDS via Terraform, extended into a Glue → Athena → Power BI star schema. Team project with Juan Hurtado and David Martinez.
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/Julian-Rincon/sentiment140-lab2"><img src="assets/projects/sentiment140.jpg" alt="Sentiment140 Lab"></a>
-<b><a href="https://github.com/Julian-Rincon/sentiment140-lab2">Sentiment140 Lab</a></b> · <code>Finished</code><br/>
-Sentiment classification compared stage by stage under a fixed protocol in MLflow; champion model (TF-IDF + logistic regression, test macro-F1 0.824) registered and served by a public FastAPI. Team of five.
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
 <a href="https://github.com/Julian-Rincon/nlp-pipeline-api"><img src="assets/projects/nlp-pipeline-api.jpg" alt="NLP Pipeline API"></a>
 <b><a href="https://github.com/Julian-Rincon/nlp-pipeline-api">NLP Pipeline API</a></b> · <code>Finished</code><br/>
 spaCy/FastAPI microservice (POS, NER, dependency parsing) with TF-IDF/BoW vectorizers written from scratch, deployed on EC2 and AWS Lambda. Scored 93/100 in a live evaluation. Team project.
-</td>
-<td width="50%" valign="top">
-<a href="https://github.com/Julian-Rincon/dino-island-lab2"><img src="assets/projects/dino-island.jpg" alt="Dino Island"></a>
-<b><a href="https://github.com/Julian-Rincon/dino-island-lab2">Dino Island</a></b> · <code>Finished</code><br/>
-Four chained generative stages: a character-level GRU (chosen over an LSTM by validation loss) invents a dinosaur name, gemma4 via Ollama on SageMaker writes its identity, aMUSEd draws it, and a Lambda web app lets you chat with it. Team of five.
 </td>
 </tr>
 </table>
@@ -147,19 +151,15 @@ Four chained generative stages: a character-level GRU (chosen over an LSTM by va
 
 | Project | Description | Stack | Status |
 |---------|-------------|-------|--------|
-| [SAVI](https://github.com/Julian-Rincon/ames-housing-ml) | RL + RAG real-estate valuation agent on an event-driven AWS pipeline. R²(log) 0.921, 191 tests, [live demo](https://5w442qdw5roag3chtm6esbohfu0mwaap.lambda-url.us-east-1.on.aws/). v1–v2 team, v3 individual | XGBoost, PyTorch, AWS Lambda/EC2/SageMaker, Claude | Finished |
+| [SAVI](https://github.com/Julian-Rincon/ames-housing-ml) | RL + RAG real-estate valuation agent on an event-driven AWS pipeline. R²(log) 0.921, 197 tests, [live demo](https://julianrincon-savi-agent.static.hf.space/). v1–v2 team, v3 individual | XGBoost, PyTorch, AWS Lambda/EC2/SageMaker, Claude | Finished |
 | [Phantom](https://github.com/Julian-Rincon/phantom) | Local multi-agent workspace for Claude Code, OpenCode and Hermes on a Codeg fork: measured model routing, voice mode, Telegram bridge, Wayland overlay | Rust, TypeScript, Tauri, MCP | Active |
-| [NEXUS v2](https://github.com/Julian-Rincon/NEXUS-Public) | Personal AI assistant as a layer on Phantom: daily briefing, push-to-talk voice, memory shared across agents, test-fixing copilot, cloud watchdog. 110 tests, no root. v1 (2025 – 2026) archived | Python, MCP, SQLite, systemd | Active |
-| [Victor](https://github.com/Julian-Rincon/victor-race-engineer) | Voice-driven AI race engineer for Assetto Corsa on Linux. C SHM reader under Proton, 4-provider LLM failover, 143 tests | Python, C, Wine/Proton | Active |
+| [NEXUS v2](https://github.com/Julian-Rincon/NEXUS-Public) | Personal AI assistant as a layer on Phantom: daily briefing, push-to-talk voice, memory shared across agents, test-fixing copilot, cloud watchdog. 1,483 tests, no root. v1 (2025 – 2026) archived | Python, MCP, SQLite, systemd | Active |
+| [Victor](https://github.com/Julian-Rincon/victor-race-engineer) | Voice-driven AI race engineer for Assetto Corsa on Linux. C SHM reader under Proton, 4-provider LLM failover, 219 tests | Python, C, Wine/Proton | Active |
 | [Ayuda Terremoto Colombia](https://github.com/Julian-Rincon/ayuda-terremoto-colombia) | Offline-first humanitarian coordination after the M7.4 Chocó earthquake. 80+ backend tests, open to contributors | FastAPI, PostgreSQL, React, IndexedDB | Active |
 | [ShopStream](https://github.com/Julian-Rincon/shopstream-bigdata) | AWS Big Data pipeline: 2.5M events, Lambda, EMR/PySpark, Glue ETL, RDS, Flask/Zappa, CI/CD | PySpark, Lambda, EMR, Glue | Finished |
 | [Sentiment140 Lab](https://github.com/Julian-Rincon/sentiment140-lab2) | MLflow-tracked sentiment classification, champion model served by FastAPI on EC2 (macro-F1 0.824) · team of five | scikit-learn, MLflow, FastAPI | Finished |
-| [Dino Island](https://github.com/Julian-Rincon/dino-island-lab2) | Generative pipeline: char-level GRU names → gemma4 on SageMaker identity → aMUSEd image → chat, served by AWS Lambda · team of five | PyTorch, Ollama, SageMaker, Lambda | Finished |
 | [NLP Pipeline API](https://github.com/Julian-Rincon/nlp-pipeline-api) | spaCy/FastAPI NLP microservice with from-scratch vectorizers, on EC2 and AWS Lambda · team project | spaCy, FastAPI, AWS Lambda | Finished |
 | [Chinook Cloud Platform](https://github.com/Julian-Rincon/chinook-cloud-platform) | React + FastAPI on EC2, Terraform IaC, Glue → Athena → Power BI star schema · team of three | AWS, Terraform, FastAPI, Glue | Finished |
-| [ML DSL with ANTLR4](https://github.com/Julian-Rincon/Proyecto-Final-L) | Custom language for ML workflows: grammar + interpreter that trains and evaluates a K-Means model | Python, ANTLR4, scikit-learn | Finished |
-| [HPC Workshops](https://github.com/Julian-Rincon/HPC) | TSP brute force, Sobel edge detection, video processing, distributed TSP on Docker Swarm · with Paula Caballero | Python, Docker Swarm | Finished |
-| [Network Traffic Analysis](https://github.com/Julian-Rincon/Analisis-de-Trafico-de-Red-con-PowerShell-y-Python) | 1.5 h real traffic capture, heavy-tail analysis over 384K files | Python, PowerShell, Pandas | Finished |
 | Project Dogma | Stochastic social-propagation simulator, team project led by a classmate. Presented at Data Fest, Universidad Sergio Arboleda ([Rulo Científico](https://www.instagram.com/p/DYU3Q1BlUdn/)). No public repo | TypeScript, React | Finished |
 
 ---
@@ -168,8 +168,8 @@ Four chained generative stages: a character-level GRU (chosen over an LSTM by va
 
 | Project | Description | Stack |
 |---------|-------------|-------|
-| Zafra CRM | AI-assisted CRM for a real client (Zafra Asesores Tributarios, a tax-advisory firm): FastAPI/SQLAlchemy backend, React frontend, Groq / Llama 3.3 70B for summaries and lead scoring, WhatsApp Cloud API bot. Delivered and demoed; authentication and continuous deployment remain before production. | FastAPI, SQLAlchemy, React, Groq |
-| [ReushiGo](https://reushi-go.vercel.app) | Ordering platform for a family coffee-distribution business: React/Vite admin panel, Express/Prisma backend, Telegram sales bot over a live 19-product catalog, admin-key auth, rate limiting, GitHub Actions CI and a written security review. Private repo. | React, Express, Prisma, Telegram Bot API |
+| Zafra CRM | Replaced a tax-advisory firm's Excel workflow (Zafra Asesores Tributarios) with a sales CRM: 81 clients and 85 tax filings migrated to PostgreSQL behind a FastAPI/SQLAlchemy API with 30+ endpoints, a React/Vite prospect pipeline, 8 LLM features (Groq, Llama 3.3 70B) and a WhatsApp Cloud API bot that qualifies prospects against DIAN filing thresholds. Delivered and demoed; authentication and continuous deployment remain before production. | FastAPI, SQLAlchemy, React, Groq |
+| [ReushiGo](https://reushi-go.vercel.app) | Ordering platform for a family coffee-distribution business: React/Vite admin panel, Express/Prisma API with 14 endpoints, Telegram sales bot over the real catalog (19 products in 4 categories), admin-key auth, rate limiting, 12 tests, GitHub Actions CI and a written security review. Private repo. | React, Express, Prisma, Telegram Bot API |
 
 ---
 
@@ -219,7 +219,7 @@ Led hardware design and commercial strategy for an intelligent automatic irrigat
 
 `3D Modeling` `Sensor Integration` `Hardware Design` `Business Strategy` `Pitching`
 
-### [WarmiTics — Wisibilízalas, Universidad Pompeu Fabra](https://sites.google.com/view/warmitics) — 1st Place · `2019`
+### [WarmiTics — Wisibilízalas, Pompeu Fabra University](https://sites.google.com/view/warmitics) — 1st Place · `2019`
 
 Technical PM and Lead Frontend/UX for WarmiTics, a web platform highlighting women leaders in STEM. Built the full web application and conducted structured interviews with women leaders in technology for its content. Won 1st place in the Senior category at age 17, competing against teams from Latin America and Europe.
 
@@ -243,7 +243,7 @@ Technical PM and Lead Frontend/UX for WarmiTics, a web platform highlighting wom
 
 <div align="center">
 
-**Open to ML Engineering / Data Engineering internships (January – June 2027) and research collaborations**
+**Open to internships in data science, data analytics, ML/AI engineering and software development (January – June 2027), and to research collaborations**
 
 [julian-rincon.github.io](https://julian-rincon.github.io)
 
